@@ -6,6 +6,7 @@ use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class RegistrationType extends AbstractType
 {
@@ -16,6 +17,7 @@ class RegistrationType extends AbstractType
             ->add('mail')
             ->add('Age')
             ->add('Type')
+            ->add('save', SubmitType::class)
         ;
     }
 
